@@ -92,6 +92,10 @@ app.get('/admin', function(req, res){
   res.render('admin-login')
 })
 
+app.get('/spin', (req, res)=> {
+  res.render('spin')
+})
+
 app.post('/admin', function(req, res){
   // console.log(req.body.password)
   if (req.body.password === 'admin') {
