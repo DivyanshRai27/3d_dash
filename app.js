@@ -155,6 +155,10 @@ app.get('/model', (req, res) => {
   res.render('model')
 })
 
+app.get('/vote', (req, res) => {
+  res.render('vote')
+})
+
 app.post('/register', (req,res) => {
   User.register({username: req.body.username, name: req.body.name}, req.body.password, function(err, user){
     if (err) {
