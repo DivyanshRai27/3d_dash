@@ -93,6 +93,29 @@ app.get('/spin', (req, res)=> {
   res.render('spin')
 })
 
+app.get('/creator', (req, res)=> {
+  res.render('creator')
+})
+
+
+
+app.post('/creator', (req, res)=>{
+  let idup = req.body.idup
+  let idlow = req.body.idlow
+  if (idup==="drags1" && idlow==="dragp1") {
+      res.render('s1p1')
+  }
+  if (idup==="drags2" && idlow==="dragp1") {
+    res.render('s2p1')
+}
+if (idup==="drags1" && idlow==="dragp2") {
+  res.render('s1p2')
+}
+if (idup==="drags2" && idlow==="dragp2") {
+  res.render('s2p2')
+}
+})
+
 app.post('/spin', async (req, res) =>{
   // console.log(req.body.mcoin)
       const post = new Post({
