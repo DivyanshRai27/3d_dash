@@ -489,8 +489,8 @@
 						  </div>
 						  <center class="mt-100 align-items-center justify-content-between">
 						    <form class="form-group text-center" action="" method="post">
-						        <input class="form-group text-center" type="text" id="xv" style="color:black; text-align:center;" readonly="1">
-						        <input class="form-group" type="text" id="xval" hidden>
+						        <input class="form-group text-center" type="text" id="xv" name="msg" style="color:black; text-align:center;" readonly="1">
+						        <input class="form-group" type="text" id="xval" name="mcoin" hidden>
 						        <button class="form-group mt-7 btn btn-grad btn-lg" type="submit"><i class="ri-donut-chart-fill
 							            lg"></i> Claim Now</button>
 						    </form>
@@ -823,7 +823,7 @@ $(document).ready(function(){
         score=0;
     }
     else if (degmod>=30 && degmod <90){
-        initext = 'Won Rs 100 Off Coupon';
+        initext = 'Won 100 M-Coins';
         score = 100;
     }
     else if (degmod>=90 && degmod <150){

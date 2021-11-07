@@ -63,10 +63,7 @@ passport.deserializeUser(User.deserializeUser());
 
 //post
 const postSchema = new mongoose.Schema({
-  doctor: String,
-  time: String,
-  date: String,
-  mode: String,
+  mcoin: String,
   postedBy:{
     type: ObjectId,
     ref: "User"
@@ -94,6 +91,16 @@ app.get('/admin', function(req, res){
 
 app.get('/spin', (req, res)=> {
   res.render('spin')
+})
+
+app.post('/spin', async (req, res) =>{
+  // console.log(req.body.mcoin)
+      const post = new Post({
+        mcoin: req.body.mcoin
+      })
+      const newPost = await post.save()
+    res.render('index')
+
 })
 
 app.post('/admin', function(req, res){
